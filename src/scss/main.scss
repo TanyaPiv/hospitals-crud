@@ -1,0 +1,185 @@
+@import "./vars";
+@import "./libs";
+@import "./fonts";
+@import "./media";
+
+.container {
+    max-width: 1150px;
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.button {
+    &-add {
+        display: block;
+        margin: 30px auto;
+        padding: 15px 30px;
+        border-radius: 15px;
+        border: none;
+        background-color: cornflowerblue;
+        color: #ffffff;
+
+        &:hover {
+            background-color: darkcyan;
+        }
+    }
+}
+
+.table {
+    width: 100%;
+
+    .no-data {
+        padding: 30px;
+        text-align: center;
+        background-color: antiquewhite;
+    }
+
+    &-wrap {
+        max-width: 600px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px;
+        box-shadow: 0px 0px 20px 0px #00000069;
+    }
+
+    &-headers {
+        display: flex;
+        width: 100%;
+        border-bottom: 1px solid #0000003d;
+
+        &__item {
+            max-width: 33.3333%;
+            width: 100%;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            text-align: center;
+            background-color: gainsboro;
+        }
+    }
+
+    &-item {
+        display: flex;
+        position: relative;
+        cursor: pointer;
+
+        &:hover, &:focus {
+            .table-item__controls {
+                display: block;
+            }
+        }
+
+        div {
+            max-width: 33.3333%;
+            width: 100%;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            text-align: center;
+        }
+
+        &:nth-child(2n+1) {
+            div {
+                &:nth-child(2n+1) {
+                    background-color: antiquewhite;
+                }
+    
+                &:nth-child(2n) {
+                    background-color: gainsboro;
+                }
+            }
+
+        }
+
+        &:nth-child(2n) {
+            div {
+                &:nth-child(2n) {
+                    background-color: antiquewhite;
+                }
+    
+                &:nth-child(2n+1) {
+                    background-color: gainsboro;
+                }
+            }
+
+        }
+
+        &__controls {
+            position: absolute;
+            right: 0;
+            z-index: 1;
+            top: 100%;
+            background-color: #ffffff !important;
+            box-shadow: 0px 0px 20px 0px #00000069;
+            border-radius: 10px;
+            overflow: hidden;
+            display: none;
+
+            button {
+                font-size: 11px;
+                border-radius: 3px;
+                border: solid 1px gainsboro;
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.modal {
+    background-color:rgba( 0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+
+    &_active {
+        display: flex;
+    }
+
+    &-window { 
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
+        background-color: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            input {
+                max-width: 300px;
+                width: 100%;
+                margin-bottom: 10px;
+                border-radius: 2px;
+                padding: 5px;
+            }
+
+            button {
+                padding: 5px 10px;
+                border: none;
+                border-radius: 2px;
+                background-color: cornflowerblue;
+                color: #ffffff;
+
+                &:hover {
+                    background-color: cadetblue;
+                }
+
+                &.modal-close {
+                    background-color: darkmagenta;
+                    margin-top: 10px;
+
+                    &:hover {
+                        background-color: crimson;
+                    }
+                }
+            }
+        }
+    }
+}
