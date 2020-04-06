@@ -27,3 +27,13 @@ Install:
 * cd ./hospitals-crud
 * yarn | npm i
 * yarn start | npm run start
+
+
+Test case №2.
+    SELECT TOP (1000) t1.[ID],t1.[FULL_NAME],t1.[SPEC],(select SUM(t2.[SUMM]) 
+    FROM [BarsGroupTest].[dbo].[TRANSACTIONS] as t2 
+    WHERE t2.[DOC_ID] = t1.[ID] and YEAR(t2.[DATE]) = 2019)
+    FROM [BarsGroupTest].[dbo].[Doctors] as t1
+    WHERE (select SUM(t2.[SUMM]) 
+    FROM [BarsGroupTest].[dbo].[TRANSACTIONS] as t2 
+    WHERE t2.[DOC_ID] = t1.[ID] and YEAR(t2.[DATE]) = 2019) > 2500
