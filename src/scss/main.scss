@@ -41,13 +41,13 @@
         margin-left: auto;
         margin-right: auto;
         border-radius: 10px;
-        box-shadow: 0px 0px 20px 0px #00000069;
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
     }
 
     &-headers {
         display: flex;
         width: 100%;
-        border-bottom: 1px solid #0000003d;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.301);
 
         &__item {
             max-width: 33.3333%;
@@ -56,6 +56,10 @@
             padding-bottom: 8px;
             text-align: center;
             background-color: gainsboro;
+
+            @media(max-width: 560px) {
+                font-size: 13px;
+            }
         }
     }
 
@@ -76,6 +80,10 @@
             padding-top: 8px;
             padding-bottom: 8px;
             text-align: center;
+
+            @media(max-width: 560px) {
+                font-size: 11px;
+            }
         }
 
         &:nth-child(2n+1) {
@@ -110,7 +118,7 @@
             z-index: 1;
             top: 100%;
             background-color: #ffffff !important;
-            box-shadow: 0px 0px 20px 0px #00000069;
+            box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);
             border-radius: 10px;
             overflow: hidden;
             display: none;

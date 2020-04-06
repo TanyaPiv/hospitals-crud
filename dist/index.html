@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/main.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <button type="button" class="button-add">Добавить</button>
+            <div class="table-wrap">
+                <div class="table-headers">
+                    <div class="table-headers__item">Наименование учреждения</div>
+                    <div class="table-headers__item">Адрес</div>
+                    <div class="table-headers__item">Телефон</div>
+                </div>
+                <div class="table">
+                    <div class="no-data">Нет данных</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal">
+            <div class="modal-window">
+                <form>
+                    <input name='full_name' type="text" placeholder="Наименование учреждения">
+                    <input name='address' type="text" placeholder='Адрес'>
+                    <input name='phone' type="text" placeholder="Телефон">
+                    <button class="modal-submit">Добавить</button>
+                    <button class="modal-close">Отмена</button>
+                </form>
+            </div>
+        </div>
+
+        
+
+        <script src="./js/main.min.js"></script>
+    </body>
+</html>
