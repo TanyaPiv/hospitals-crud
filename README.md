@@ -1,4 +1,4 @@
-Hospital crud.
+Hospitals crud.
 
 Информация должна отображаться в виде таблицы, со следующими полями:
 * Наименование учреждения (поле full_name)
@@ -24,6 +24,6 @@ Tech stack:
 
 Install:
 * git clone https://github.com/PeachTat/hospitals-crud.git
-* cd ./hospital-crud
+* cd ./hospitals-crud
 * yarn | npm i
 * yarn start | npm run start
